@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "4.x",
+    "body-parser": "1.x",
+    "mongoose": "~4.1.10"
+  },
+  "name": "online-job-app",
+  "version": "0.0.0",
+  "description": "ERROR: No README data found!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}
