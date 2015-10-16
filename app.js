@@ -1,4 +1,6 @@
-//=-=-=-=-=-=-=-=-=-=-=-=- Requires =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-= \\
+//Yo! What up my glip glops!
+
+//REQUIRES\\
 
 
 var express    = require('express');
@@ -6,13 +8,20 @@ var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
 
 
-//=-=-=-=-=-=-=-=-=- Create Express App =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\\
+//"I'm sorry, Morty. It's a bummer. 
+//In reality you're as dumb as they come."
+
+//CREATE EXPRESS APP\\
 
 
 var app = express();
 
 
-//=-=-=-=-=-=-=-=-=-=- Connect to MongoDB -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= \\
+//We need a hang glider, and a crotch less uncle sam costume,
+//and I want the entire field of your largest stadium covered end to end with naked red heads,
+//and I want the stands packed with every man that remotely resembles my father.
+
+//CONNECT TO MONGODB\\
 
 
 mongoose.connect('mongodb://localhost/mycompanyname');
@@ -28,7 +37,9 @@ var applicantSchema = {
 var Applicant = mongoose.model('Applicant', applicantSchema)
 
 
-//=-=-=-=-=-=-=-= Application Config =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\\
+//This isn't Game of Thrones, Morty
+
+//APPLICATION CONFIG\\
 
 
 app.use(bodyParser.json());
@@ -36,7 +47,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
 
-//=-=-=-=-=-=-=-=-=-=-=- Routes =-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=\\
+//Aww, gee, you got me there, Rick.
+
+//ROUTES\\
 
 
 app.get('/', function(req, res) {
@@ -44,7 +57,10 @@ app.get('/', function(req, res) {
 });
 
 
-//=-=-=-=-=-=-=-=-=- list of applicants -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\\
+// You're like Hitler, except...Hitler cared about Germany,
+// or something
+
+//LIST OF APPLICANTS\\
 
 
 app.get('/applicants', function(req, res){
@@ -64,7 +80,11 @@ app.get('/retrieveApplicants', function(req, res){
 	})
 })
 
-//-=-=-=-=-=-=-=--= creates applicant =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\\
+
+//If I've learned one thing, it's that before you get anywhere in life,
+//you gotta stop listening to yourself.
+
+//CREATES APPLICANT\\
 
 
 app.post('/applicant', function(req, res){
@@ -81,11 +101,15 @@ app.post('/applicant', function(req, res){
 		console.log(err)
 	})
 
-	res.send('Success!');
+	res.send('Congrats you are qualified to sleep with my grandson!');
 });
 
 
-//=-=-=-=-=-=-=-=-= removes applicant =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\\
+//Do you know how many characters there are in the Simpsons Morty?
+//There's like a-a BILLION CHARACTERS, M-Morty. 
+//There was an episode where Former President BUSH was their neighbor!
+
+//REMOVES APPLICANT\\
 
 
 app.get('/removeApplicant', function(req, res){
@@ -93,6 +117,8 @@ app.get('/removeApplicant', function(req, res){
 
 })
 
+
+//You're not gonna believe this, because it usually never happens, but I made a mistake
 
 //=-=-=-=-= Create Server and Listen for Connections =-=-=-=-=-=-=-\\
 
